@@ -12,8 +12,8 @@ script:
 
 deploy:
   provider: pypi
-  username: " "
-  password: ""
+  username: "__token__"
+  password: "teste"
   on:
     all_branches: true
     python: 3.8
