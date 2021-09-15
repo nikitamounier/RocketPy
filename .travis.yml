@@ -13,7 +13,7 @@ script:
 deploy:
   provider: pypi
   username: "__token__"
-  password: "teste"
+  password: "pypi-AgEIcHlwaS5vcmcCJDk2ZmY4YWNiLTZmNDgtNDA4Ni1hZDE4LWRkZDA5NGVhNTFkOQACOnsicGVybWlzc2lvbnMiOiB7InByb2plY3RzIjogWyJyb2NrZXQtcHkiXX0sICJ2ZXJzaW9uIjogMX0AAAYgfHEYb5bppuxoyyXJkJ4cozz4NaAwRTvUKiGBxr0MN9c"
   on:
     all_branches: true
     python: 3.8
