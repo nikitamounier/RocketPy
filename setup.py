@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="rocketpy", 
-    version="0.9.8",
+    name="rocket.py", 
+    version="1.0.1",
     install_requires = [
         'numpy>=1.0',
         'scipy>=1.0',
