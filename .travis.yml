@@ -1,19 +1,18 @@
 language: python
 python:
-  - "3.8"
+- '3.8'
 install:
-  - make install
-  - pip install -r requirements_test.txt
-
+- make install
+- pip install -r requirements_test.txt
 before_script:
-  - make verify-lint
+- make verify-lint
 script:
-  - make test
-
+- make test
 deploy:
   provider: pypi
-  username: "__token__"
-  password: $PYPI_SECRET
+  username: __token__
+  password:
+    secure: V9KkC9XETiTscRwDhA0QObIzWnD+eA8S/n1vFpGy27X8SjCU6OUJd4GfpLSK/3/XZs5yzWHnCMR5MBqH0kHbwF0z07xcoaHEUyLfg46pu8ktHjMJKM/yyahoGO2XyhkkJreMxgk8tR27U+mspNMDaEoIvCaTpwM5JZqQVbUtIUXvAOz74um/PPrz1lTXH5jJGW7Pm7bBQCLP/fdBhGwUavIEi/rV/jHo31PNl95f3M5pkKYbJvKMun5Lg5Olu1l7V9gUhLUhI/VHv8LTQi6PZSvZqAmZwHBWRwsMLvS1gkVH0ManJaye1M3jZuQZ7bt6wH2I0IH+xFZRvTHwfoCC28BDLwLs0I0TqkfE71iBIR5GAKQ+H6wGHHFP8uyZ6kpQXByy8A7CmX1BUQO/uLORKf6sVrxxkqj5ZG6oCEKre8v0MBv54GMdzWos7yA99rp12WeJZQxUFwKAMXIQcwknbexhsVzeUGWVsOzK+mbTiVhStBHkwB9MAqteGr1qDtJ1aV2Gu2f+yASHGjaoJoxGfD3A6LcESw6AJgm16J704LdKWeSoJbKm+Z95GCQQoVB6H7H/IJSBIfTvgJH93PPo2jau03eqGf6mBT1THVvbScthCoFjnyHgVxIjUIHVDjEBA2r8bmL8twCmbC/c6G4DDWpiBaSMsougFMkZnIUDunA=
   twine_version: 1.12.1
   on:
     all_branches: true
