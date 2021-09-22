@@ -8,6 +8,7 @@ before_script:
 - make verify-lint
 script:
 - make test
+
 deploy:
   provider: pypi
   username: __token__
