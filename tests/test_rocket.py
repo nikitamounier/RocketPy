@@ -102,7 +102,7 @@ def test_evaluate_static_margin_assert_cp_equals_cm(kg, m, dimensioneless_rocket
 def test_add_nose_assert_cp_cm_plus_nose(k, type, dimensioneless_rocket, m):
     rocket = dimensioneless_rocket
     rocket.addNose(length=0.55829 * m, kind=type, distanceToCM=0.71971 * m)
-    cpz = (0.71971 + k * 0.55829) * m
+    cpz = (0.71971 + k * 0.55829 ** 2) * m
     clalpha = 2
 
     static_margin_initial = (rocket.centerOfMass(0) - cpz) / (2 * rocket.radius)
@@ -132,7 +132,7 @@ def test_add_tail_assert_cp_cm_plus_tail(dimensioneless_rocket, m):
 
     static_margin_final = (rocket.centerOfMass(-1) - cpz) / (2 * rocket.radius)
     assert static_margin_final == pytest.approx(rocket.staticMargin(-1), 1e-12)
-    
+
     assert np.abs(clalpha) == pytest.approx(np.abs(rocket.totalLiftCoeffDer), 1e-8)
     assert rocket.cpPosition == cpz
 
