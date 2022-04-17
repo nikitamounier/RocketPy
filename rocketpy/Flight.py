@@ -3333,35 +3333,8 @@ class Flight:
         # Print a summary of data about the flight
         self.info()
 
-        print("\n\nNumerical Integration Information\n")
-        self.printNumericalIntegrationSettings()
-
-        print("\n\nTrajectory 3d Plot\n")
+        print("\n\nFlight Trajectory\n")
         self.plot3dTrajectory()
-
-        print("\n\nTrajectory Kinematic Plots\n")
-        self.plotLinearKinematicsData()
-
-        print("\n\nAngular Position Plots\n")
-        self.plotFlightPathAngleData()
-
-        print("\n\nPath, Attitude and Lateral Attitude Angle plots\n")
-        self.plotAttitudeData()
-
-        print("\n\nTrajectory Angular Velocity and Acceleration Plots\n")
-        self.plotAngularKinematicsData()
-
-        print("\n\nTrajectory Force Plots\n")
-        self.plotTrajectoryForceData()
-
-        print("\n\nTrajectory Energy Plots\n")
-        self.plotEnergyData()
-
-        print("\n\nTrajectory Fluid Mechanics Plots\n")
-        self.plotFluidMechanicsData()
-
-        print("\n\nTrajectory Stability and Control Plots\n")
-        self.plotStabilityAndControlData()
 
         return None
 
@@ -3608,3 +3581,4 @@ class Flight:
                     + str(len(self.parachutes))
                     + "}"
                 )
+

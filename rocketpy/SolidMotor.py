@@ -776,24 +776,9 @@ class SolidMotor:
         ------
         None
         """
-        # Print nozzle details
-        print("Nozzle Details")
-        print("Nozzle Radius: " + str(self.nozzleRadius) + " m")
-        print("Nozzle Throat Radius: " + str(self.throatRadius) + " m")
-
-        # Print grain details
-        print("\nGrain Details")
-        print("Number of Grains: " + str(self.grainNumber))
-        print("Grain Spacing: " + str(self.grainSeparation) + " m")
-        print("Grain Density: " + str(self.grainDensity) + " kg/m3")
-        print("Grain Outer Radius: " + str(self.grainOuterRadius) + " m")
-        print("Grain Inner Radius: " + str(self.grainInitialInnerRadius) + " m")
-        print("Grain Height: " + str(self.grainInitialHeight) + " m")
-        print("Grain Volume: " + "{:.3f}".format(self.grainInitialVolume) + " m3")
-        print("Grain Mass: " + "{:.3f}".format(self.grainInitialMass) + " kg")
-
+       
         # Print motor details
-        print("\nMotor Details")
+        print("\MOTOR DETAILS\n")
         print("Total Burning Time: " + str(self.burnOutTime) + " s")
         print(
             "Total Propellant Mass: "
@@ -818,16 +803,11 @@ class SolidMotor:
         # Show plots
         print("\nPlots")
         self.thrust()
+        print("\n     ---> The Thrust Curve (Thrust by Time) of the motor\n")
         self.mass()
-        self.massDot()
-        self.grainInnerRadius()
-        self.grainHeight()
-        self.burnRate()
+        print("\n     ---> The Propellant Mass by Time\n")
         self.burnArea()
-        self.Kn()
-        self.inertiaI()
-        self.inertiaIDot()
-        self.inertiaZ()
-        self.inertiaZDot()
+	print("\n     ---> The Burn Area by Time\n")
 
         return None
+
